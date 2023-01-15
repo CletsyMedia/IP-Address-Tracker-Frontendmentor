@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/icon-location.svg">
+  <link rel="stylesheet" href="./CSS/all.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <!-- Rubik Font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Leaftlet css -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+  <!-- leafleft JS -->
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin="" defer></script>
+
+  <script src="./JS/main.js" defer async></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+</head>
+<body>
+  <main>
+    <div class="topInfo">
+      <h1 class="title">IP Address Tracker</h1>
+      <form action="#" autocomplete="off">
+        <input type="text" id="ipInput" autofocus placeholder="Search for any IP Address">
+				<button type="submit" id="submitInput"><i class="fal fa-chevron-right"></i></button>
+      </form>
+
+      <div class="infoBox" id="infoBox">
+        <div class="box ipBoxInfo">
+          <span class="field-name">ip address</span>
+          <span class="info-field" id="ip-info"></span>
+        </div>
+        <div class="box locationBoxInfo">
+          <span class="field-name">location</span>
+          <span class="info-field" id="location-info"></span>
+        </div>
+        <div class="box timezoneBoxInfo">
+          <span class="field-name">timezone</span>
+          <span class="info-field" id="timezone-info"></span>
+        </div>
+        <div class="box ispBoxInfo">
+          <span class="field-name">isp</span>
+          <span class="info-field" id="isp-info"></span>
+        </div>
+      </div>
+    </div>
+    <dialog id="modalBox">
+      <h3><i class="fal fa-exclamation-triangle">OOPS</i></h3>
+      <p id="error-msg"></p>
+      <button id="close-btn">Close</button>
+    </dialog>
+    <div id="map"></div>
+  </main>
+  <footer class="footer">
+    <p>Created with love by <a href="">CletsyMedia</a></p>
+  </footer>
+</body>
+</html>
